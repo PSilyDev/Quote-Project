@@ -1,0 +1,121 @@
+.card_parent {
+    display: flex;
+    flex-direction: row;
+    /* background-color: red; */
+}
+  
+.left_button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 25%;
+}
+  
+.card_rectangle {
+    border: white 3px solid;
+    height: 90%;
+    width: 55%;
+    border-radius: 40px;
+    background-color: #E9EDC9;
+    box-shadow: 4px 4x 4px 0px rgba(0, 0, 0, 0.25) inset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.card_content {
+    display: flex;
+    flex-direction: column;
+    /* background-color: red; */
+    height: 90%;
+    width: 80%;
+}
+  
+.genre_button {
+    display: flex;
+    width: 100%;
+    height: 15%;
+    /* background-color: green; */
+    align-items: center;
+}
+  
+.genre_frame {
+    display: flex;
+    background-color: #FAEDCD;
+    width: 30%;
+    height: 20%;
+    margin-left: 8px;
+    padding: 9px 17px;
+    border: 4px solid white;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+}
+  
+.genre_frame text {
+    color: #000;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+  
+.card_frame {
+    width: 100%;
+    height: 70%;
+    /* background-color: blue; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: stretch;
+    padding-left: 10px;
+    /* text-align: left; */
+}
+  
+.card_frame text {
+    color: #000;
+    font-family: 'Gentium Book Plus';
+    font-size: 27px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 35px;
+    text-align: left;
+}
+  
+.author_frame {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 15%;
+    /* background-color: yellow; */
+    align-items: center;
+    padding-left: 10px;
+}
+  
+.author_frame img {
+    width: 50px;
+    height: 50px;
+    flex-shrink: 0;
+    border-radius: 100px;
+}
+  
+.author_frame text {
+    margin-left: 8px;
+    color: #000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+  
+.right_button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 25%;
+}
