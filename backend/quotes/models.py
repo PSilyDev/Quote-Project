@@ -9,7 +9,7 @@ class Quote(models.Model):
 
     genre = models.CharField(max_length=100, default="General")    # for storing the quote's genre (Philosophy, Motivation, ...)
 
-    img = models.URLField(blank=True, null=True)    # URL for the author's image
+    image = models.URLField(blank=True, null=True)    # URL for the author's image
 
     def __str__(self):  
         return f'"{self.text}" - {self.author}'

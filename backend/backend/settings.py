@@ -27,6 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+CORS_ALLOW_ALL_ORIGINS = True 
 
 # Application definition
 
@@ -128,8 +129,13 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",
-    "http://127.0.0.1:5174",
-    "http://localhost:5174"
-]
+# CORS_ALLOWED_ORIGINS = [
+#     "http://localhost:3000",
+#     "http://127.0.0.1:5174",
+#     "http://localhost:5174",
+#     "http://localhost:5173",
+# ]
+
+CORS_ALLOW_CREDENTIALS = True  # If sending cookies/auth headers
+CORS_ALLOW_METHODS = ["GET", "POST", "PUT", "DELETE", "OPTIONS"]  # Allowed HTTP methods
+CORS_ALLOW_HEADERS = ["*"]  # Allow all headers
