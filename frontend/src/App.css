@@ -4,20 +4,22 @@
 html, body {
   margin: 0;
   padding: 0;
-  width: 100vw;  /* Full viewport width */
-  height: 100vh; /* Full viewport height */
+  width: 100%;  /* Full viewport width */
+  height: 100dvh; /* Full viewport height */
   overflow: hidden; /* Prevent scrollbars */
   box-sizing: border-box;
+  background-color: #ccd5ae; /* Set background color */
 }
 
 .base {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100dvh;
   display: flex; 
   flex-direction: column;
   justify-content: center; /* Centers content horizontally */
   align-items: center; /* Centers content vertically */
   background-color: #ccd5ae; /* Set background color */
+  overflow: hidden;
 }
 
 .content {
@@ -137,4 +139,77 @@ html, body {
   font-weight: 400;
   margin-left: 4px;
   margin-right: 4px;
+}
+
+@media (max-width: 768px) {
+  .base {
+    min-height: 100vh !important; /* Ensure it takes full screen */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Align content to the top */
+    align-items: center;
+  }
+  
+  .master {
+    display: flex;
+    /* border: 2px solid red; */
+    flex-direction: column; /* Stack items vertically */
+    height: 100%; /* Let height adjust dynamically */
+    min-height: 90vh;
+    width: 90vw; /* Set width */
+    padding: 10px;
+    justify-content: center; /* Center content inside */
+    align-items: center;
+    margin-left: 7px;
+  }
+
+ 
+  .search_heading {
+    height: auto;
+    width: 95%; /* Ensure full width */
+    text-align: center; /* Keep text centered */
+    margin-bottom: 10px; /* Remove unnecessary margins */
+    /* padding-top: 10px; */
+    padding: 0;
+    align-self: center;
+  }
+
+  .search_heading h1 {
+    font-size: 26px; /* Reduce font size for smaller screens */
+    text-align: center; /* Center the text */
+  }
+
+  .search_heading h1 em {
+    color: #000;
+    font-family: 'Gentium Book Plus', serif;
+    font-size: 26px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .search_subheading {
+    display: none;
+  }
+
+  .search_subheading h4 {
+    display: none;
+  }
+
+  .search_parent {
+    flex: 0.3;
+    width: 100%; /* Make them full-width */
+    height: auto; /* Let height adjust dynamically */
+    padding: 10px;
+    justify-content: start;
+  }
+
+  .made_with_love {
+    position: relative;
+    bottom: auto;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px; /* Reduce text size */
+  }
 }

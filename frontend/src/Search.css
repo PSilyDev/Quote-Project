@@ -52,3 +52,26 @@ html, body {
   margin-left: 4px;
   margin-right: 4px;
 }
+
+@media screen and (max-width: 600px) {
+  .content {
+    width: 85%;
+    padding: 10px;
+  }
+
+  .search_centered {
+    flex-direction: column;
+  }
+
+  .card_parent {
+    margin-top: 10px`;
+  }
+  .card {
+    max-width: 90%;
+  }
+
+  .made_with_love {
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+}

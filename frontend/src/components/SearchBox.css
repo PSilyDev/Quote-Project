@@ -69,3 +69,41 @@
 .search_button:hover {
     background: #333; 
 }
+
+@media (max-width: 768px) {
+    .search_left {
+        align-items: start;
+    }
+
+    .search_box {
+        justify-content: center;
+        margin-top: 20px;
+        margin-left: 5px;
+    }
+
+    .search_container {
+        width: 90%; /* Make it take up most of the screen width */
+        max-width: 350px; /* Prevent it from becoming too large */
+        padding: 8px 12px;
+        border-radius: 10px; /* Smaller border radius for compact look */
+    }
+
+    .search_icon {
+        font-size: 16px;
+        margin-right: 4px;
+    }
+
+    .search_input {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .search_button {
+        padding: 8px 10px;
+        font-size: 10px;
+        /* white-space: nowrap; */
+        /* flex-shrink: 0; */
+        position: relative;
+        left: -4px;
+    }
+}
