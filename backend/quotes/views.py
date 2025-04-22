@@ -16,6 +16,7 @@ from django.views.decorators.http import require_GET
 def quote_list(request):
     # returns the list of all quotes
     quotes = Quote.objects.all()
+    print("Quotes in DB1:", list(quotes.values()))  # Debugging output
     serializer = QuoteSerializer(quotes, many=True)
     return Response(serializer.data)
 
@@ -29,6 +30,7 @@ def random_quote(request):
     # else pick a random index
     random_index = random.randint(0, count-1)
     quote = Quote.objects.all()[random_index]
+    print("Quotes in DB2:", list(quote.values()))  # Debugging output
     serializer = QuoteSerializer(quote)
     return Response(serializer.data)
 
@@ -40,6 +42,7 @@ def search_quotes(request):
     author = request.GET.get('author', None)
     if author:
         quotes = Quote.objects.filter(author__icontains=author)
+        print("Quotes in DB3:", list(quotes.values()))  # Debugging output
         serializer = QuoteSerializer(quotes, many=True)
         return Response(serializer.data)
 

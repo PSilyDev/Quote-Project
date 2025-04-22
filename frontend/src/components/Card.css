@@ -122,15 +122,15 @@
 
 @media (max-width: 768px) {
     .card_parent {
-        padding: 0;
+      padding: 0;
       flex-direction: row; /* Stack elements vertically */
       align-items: center;
     }
     .left_button, .right_button {
-        height: auto;
+      height: auto;
       justify-content: center; /* Center align buttons */
-        width: 15%; /* Reduce width */
-        margin: 5px;
+      width: 15%; /* Reduce width */
+      margin: 5px;
     }
     
     .left_button svg, .right_button svg {
@@ -145,8 +145,8 @@
     }
   
     .card_content {
-        display: flex;
-        flex-direction: column;
+      display: flex;
+      flex-direction: column;
       width: 100%;
       height: 100%;
     }
@@ -155,24 +155,23 @@
         height: 10%;
     }
 
-  
     .genre_frame {
-      width: 40%; /* Adjust width of genre tag */
+      width: auto; /* Adjust width of genre tag */
       height: auto;
-      padding: 4px 8px;
-      font-size: 12px;
+      padding: 5px 10px;
+    }
+
+    .genre_frame text {
+      font-size: 13px;
     }
 
     .card_frame {
-        width: 100%;
-        height: 70%;
-        /* background-color: blue; */
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-self: stretch;
-        /* padding-left: 10px; */
-        /* text-align: left; */
+      width: 100%;
+      height: 70%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-self: stretch;
     }
   
     .card_frame text {
@@ -186,12 +185,163 @@
     }
   
     .author_frame img {
-      width: 40px; /* Reduce image size */
-      height: 40px;
+      width: 37px; /* Reduce image size */
+      height: 37px;
     }
-  
-    .author_name {
-      font-size: 12px; /* Adjust font size */
+    .author_frame text {
+      font-size: 16px;
     }
   }
   
+
+@media (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+  
+  .card_parent {
+    padding: 0;
+    flex-direction: row; /* Stack elements vertically */
+    align-items: center;
+  }
+
+  .left_button, .right_button {
+    height: auto;
+    justify-content: center; /* Center align buttons */
+    width: 15%; /* Reduce width */
+    margin: 5px;
+  }
+  
+  .left_button svg, .right_button svg {
+      font-size: 24px; /* Reduce icon size */
+  }
+
+  .card_rectangle {
+    width: 50%; /* Increase width for better readability */
+    height: 65%; /* Allow height to adjust dynamically */
+    padding: 40px;
+    border-radius: 20px; /* Reduce border radius for a softer look */
+  }
+
+  .card_content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+  }
+
+  .genre_button {
+      height: 10%;
+  }
+
+  .genre_frame {
+    width: 100px; /* Adjust width of genre tag */
+    height: 25px;
+    padding: 5px 10px;
+  }
+
+  .genre_frame text {
+    font-size: 19px;
+  }
+
+  .card_frame {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: stretch;
+  }
+
+  .card_frame text {
+    font-size: 42px; /* Reduce text size for smaller screens */
+    line-height: 60px;
+  }
+
+  .author_frame {
+    flex-direction: row; /* Stack image and text */
+    text-align: center;
+  }
+
+  .author_frame img {
+    width: 70px; /* Reduce image size */
+    height: 70px;
+  }
+  .author_frame text {
+    font-size: 30px;
+  }
+}
+
+@media (min-device-width: 768px) and (max-device-width: 1180px) and (orientation: landscape) {
+  
+  .card_parent {
+    padding: 0;
+    flex-direction: row; /* Stack elements vertically */
+    align-items: center;
+    margin-right: 15px;
+  }
+
+  .left_button, .right_button {
+    height: auto;
+    justify-content: center; /* Center align buttons */
+    width: 15%; /* Reduce width */
+    margin: 5px;
+  }
+  
+  .left_button svg, .right_button svg {
+      font-size: 24px; /* Reduce icon size */
+  }
+
+  .card_rectangle {
+    width: 65%; /* Increase width for better readability */
+    height: 60%; /* Allow height to adjust dynamically */
+    padding: 40px;
+    border-radius: 20px; /* Reduce border radius for a softer look */
+  }
+
+  .card_content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+  }
+
+  .genre_button {
+      height: 10%;
+  }
+
+  .genre_frame {
+    width: 82px; /* Adjust width of genre tag */
+    height: 10px;
+    padding: 10px 15px;
+  }
+
+  .genre_frame text {
+    font-size: 17px;
+  }
+
+  .card_frame {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: stretch;
+    /* background-color: red; */
+  }
+
+  .card_frame text {
+    font-size: 32px; /* Reduce text size for smaller screens */
+    line-height: 50px;
+  }
+
+  .author_frame {
+    flex-direction: row; /* Stack image and text */
+    text-align: center;
+  }
+
+  .author_frame img {
+    width: 50px; /* Reduce image size */
+    height: 50px;
+  }
+  .author_frame text {
+    font-size: 23px;
+  }
+}

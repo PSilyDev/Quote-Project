@@ -4,11 +4,11 @@
 html, body {
   margin: 0;
   padding: 0;
-  width: 100%;  /* Full viewport width */
-  height: 100dvh; /* Full viewport height */
-  overflow: hidden; /* Prevent scrollbars */
+  width: 100%;
+  height: 100dvh;
+  overflow: hidden;
   box-sizing: border-box;
-  background-color: #ccd5ae; /* Set background color */
+  background-color: #ccd5ae;
 }
 
 .base {
@@ -16,28 +16,23 @@ html, body {
   height: 100dvh;
   display: flex; 
   flex-direction: column;
-  justify-content: center; /* Centers content horizontally */
-  align-items: center; /* Centers content vertically */
-  background-color: #ccd5ae; /* Set background color */
+  justify-content: center;
+  align-items: center;
+  background-color: #ccd5ae;
   overflow: hidden;
 }
 
 .content {
-  /* border: red solid; */
   text-align: center;
-  /* color: red; */
 }
 
 .master {
-  /* background-color: blue; */
   display: flex;
   width: 1280px;
-  /* padding: 185px 106px 131px 105px; */
   height: 35vw;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  /* margin-bottom: 100px; */
 }
 
 .search_parent {
@@ -45,8 +40,6 @@ html, body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* align-items: center; */
-  /* border: 1px solid black; */
   width: 100%;
   height: 100%;
   padding: 20px;
@@ -59,7 +52,6 @@ html, body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* border: 1px solid black; */
   width: 100%;
   height: 100%;
   padding: 20px;
@@ -73,7 +65,6 @@ html, body {
   justify-content: center;
   align-self: stretch;
   text-align: left;
-  /* border: 1px solid black; */
   margin-bottom: 10px;
 }
 
@@ -84,12 +75,10 @@ html, body {
   font-style: italic;
   font-style: normal;
   font-weight: 400;
-  /* line-height: 1.2; */
   margin: 0;
 }
 
 .search_heading h1 em {
-  /* font-style: italic; */
   color: #000;
   font-family: 'Gentium Book Plus', serif;
   font-size: 56px;
@@ -113,7 +102,7 @@ html, body {
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
-  line-height: 22px; /* 110% */
+  line-height: 22px;
 }
 
 
@@ -143,22 +132,21 @@ html, body {
 
 @media (max-width: 768px) {
   .base {
-    min-height: 100vh !important; /* Ensure it takes full screen */
+    min-height: 100vh !important;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Align content to the top */
+    justify-content: center;
     align-items: center;
   }
   
   .master {
     display: flex;
-    /* border: 2px solid red; */
-    flex-direction: column; /* Stack items vertically */
-    height: 100%; /* Let height adjust dynamically */
+    flex-direction: column;
+    height: 100%;
     min-height: 90vh;
-    width: 90vw; /* Set width */
+    width: 90vw;
     padding: 10px;
-    justify-content: center; /* Center content inside */
+    justify-content: center;
     align-items: center;
     margin-left: 7px;
   }
@@ -166,17 +154,16 @@ html, body {
  
   .search_heading {
     height: auto;
-    width: 95%; /* Ensure full width */
-    text-align: center; /* Keep text centered */
-    margin-bottom: 10px; /* Remove unnecessary margins */
-    /* padding-top: 10px; */
+    width: 95%;
+    text-align: center;
+    margin-bottom: 10px;
     padding: 0;
     align-self: center;
   }
 
   .search_heading h1 {
-    font-size: 26px; /* Reduce font size for smaller screens */
-    text-align: center; /* Center the text */
+    font-size: 26px;
+    text-align: center;
   }
 
   .search_heading h1 em {
@@ -198,8 +185,8 @@ html, body {
 
   .search_parent {
     flex: 0.3;
-    width: 100%; /* Make them full-width */
-    height: auto; /* Let height adjust dynamically */
+    width: 100%;
+    height: auto;
     padding: 10px;
     justify-content: start;
   }
@@ -210,6 +197,207 @@ html, body {
     width: 100%;
     text-align: center;
     padding: 10px;
-    font-size: 14px; /* Reduce text size */
+    font-size: 14px;
+  }
+}
+
+/* iPads (Portrait & Landscape) */
+@media (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+  .base {
+    min-height: 100vh !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .master {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 100vh;
+    width: 100vw;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 7px;
+  }
+
+  .search_parent {
+    /* background-color: red; */
+    flex: 0.3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    box-sizing: border-box;
+    /* margin-top: 30px; */
+  }
+  
+  .card_parent {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+ 
+  .search_heading {
+    /* background-color: green; */
+    height: auto;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+    padding-top: 40px;
+    align-self: center;
+  }
+
+  .search_heading h1 {
+    font-size: 40px;
+    text-align: center;
+  }
+
+  .search_heading h1 em {
+    color: #000;
+    font-family: 'Gentium Book Plus', serif;
+    font-size: 40px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .search_subheading {
+    display: flex;
+    height: 28px;
+    flex-direction: column;
+    justify-content: center;
+    align-self: stretch;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .search_subheading h4 {
+    color: #6C6C6C;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 32px;
+  }
+
+  .made_with_love {
+    position: relative;
+    bottom: auto;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+  }
+}
+
+@media (min-device-width: 768px) and (max-device-width: 1180px) and (orientation: landscape) {
+  .base {
+    min-height: 100vh !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .master {
+    display: flex;
+    flex-direction: ;
+    height: 100%;
+    min-height: 100vh;
+    width: 100vw;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 7px;
+  }
+
+  .search_parent {
+    /* background-color: red; */
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    box-sizing: border-box;
+    /* margin-top: 30px; */
+  }
+  
+  .card_parent {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+ 
+  .search_heading {
+    /* background-color: green; */
+    height: auto;
+    width: 80%;
+    text-align: center;
+    margin-bottom: 10px;
+    padding-top: 40px;
+    align-self: center;
+  }
+
+  .search_heading h1 {
+    font-size: 35px;
+    text-align: center;
+  }
+
+  .search_heading h1 em {
+    color: #000;
+    font-family: 'Gentium Book Plus', serif;
+    font-size: 35px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .search_subheading {
+    display: flex;
+    height: 28px;
+    flex-direction: column;
+    justify-content: center;
+    align-self: stretch;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .search_subheading h4 {
+    color: #6C6C6C;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 32px;
+  }
+
+  .made_with_love {
+    position: relative;
+    bottom: auto;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
   }
 }

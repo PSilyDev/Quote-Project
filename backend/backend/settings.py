@@ -11,6 +11,12 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
 from pathlib import Path
+import os
+import dj_database_url
+from dotenv import load_dotenv
+load_dotenv()
+
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -20,14 +26,21 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-_900im1cy3aoggojs5@aphgk606#rz#1w8iqqxee(la=ouv@-('
+SECRET_KEY = os.getenv("DJANGO_SECRET_KEY", "django-insecure-_900im1cy3aoggojs5@aphgk606#rz#1w8iqqxee(la=ouv@-(")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.getenv("DJANGO_DEBUG", "False") == "True"
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = os.getenv("DJANGO_ALLOWED_HOSTS", "localhost,127.0.0.1").split(",")
 
-CORS_ALLOW_ALL_ORIGINS = True 
+# CORS_ALLOWED_ORIGINS = os.getenv("DJANGO_CORS_ALLOWED_ORIGINS", ).split(",")
+
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",
+    "http://127.0.0.1:5174",
+    "http://localhost:5174",
+    "http://localhost:5173",
+]
 
 # Application definition
 
@@ -80,10 +93,10 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    'default': dj_database_url.config(
+        # default=os.getenv('DATABASE_URL')
+        default='postgresql://quote_db_08gn_user:CWzVHueqh49NXwj3fYxk5rIfsDUy9mN5@dpg-cvigb1p5pdvs738mnmqg-a.oregon-postgres.render.com/quote_db_08gn'
+    )
 }
 
 
