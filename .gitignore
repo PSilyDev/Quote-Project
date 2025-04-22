@@ -8,7 +8,9 @@ __pycache__/
 *.pyo  
 
 # Ignore environment variables  
-.env  
+.env
+/backend/.env
+/backend_v2/.env
 
 # Ignore system files  
 .DS_Store  

@@ -25,6 +25,7 @@ function App() {
         }
         
         const data = await response.json();
+        console.log('data received, App.jsx - ', data);
         setQuoteData(data);
         setCurrentIndex(0);
       } catch (error) {
