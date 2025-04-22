@@ -105,8 +105,8 @@ DATABASES = {
         'NAME': 'railway',
         'USER': 'postgres',
         'PASSWORD': config('DB_PASSWORD'),
-        'HOST': 'shortline.proxy.rlwy.net',
-        'PORT': '14267',
+        'HOST': 'postgres.railway.internal',
+        'PORT': '5432',
     }
 }
 
